@@ -1,0 +1,5 @@
+main{max-width:720px;margin:0 auto;padding:28px 20px 60px}h1{font-size:24px;margin-bottom:12px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:16px 0}h2{font-size:16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.row{display:flex;gap:10px;align-items:center;margin:8px 0}.row input[type=checkbox]{width:16px;height:16px}
+label[for]{display:block;margin-bottom:6px}.list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.list li{display:flex;justify-content:space-between;gap:10px;padding:6px 10px;background:var(--bg);border-radius:5px;font-size:13px}

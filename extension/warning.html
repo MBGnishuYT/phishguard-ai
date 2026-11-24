@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Dangerous site blocked - PhishGuard AI</title>
+<link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="warning.css"></head>
+<body>
+<main>
+  <div class="icon" aria-hidden="true">!</div>
+  <h1>PhishGuard blocked this page</h1>
+  <p class="lead">The site <strong id="host"></strong> looks like a phishing page, built to steal passwords or personal details.</p>
+  <p class="score">Risk score <strong id="score"></strong> / 100 <span id="confirmed" class="chip phishing" hidden>Listed by a threat feed</span></p>
+  <h2>Why it was flagged</h2>
+  <ul id="reasons" class="reasons"></ul>
+  <p id="offline" class="muted" hidden>The PhishGuard server could not be reached, so this verdict comes from a basic offline check.</p>
+  <div class="actions"><button id="leave" class="primary">Take me to safety</button></div>
+  <details><summary>I understand the risk and still want to continue</summary>
+    <label><input type="checkbox" id="ack"> I know this site may steal my information.</label><br>
+    <button id="proceed" class="danger" disabled>Continue anyway (15 minutes)</button>
+    <button id="trust">This is a false alarm - trust this site</button>
+  </details>
+</main>
+<script src="warning.js" type="module"></script></body></html>

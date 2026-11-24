@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhishGuard AI - Security Console</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="login-card" autocomplete="on">
+    <h1>PhishGuard AI</h1>
+    <p class="muted">Sign in to the security console.</p>
+    <label for="u">Username</label><input id="u" name="username" autocomplete="username" required maxlength="64">
+    <label for="p">Password</label><input id="p" name="password" type="password" autocomplete="current-password" required maxlength="256">
+    <button class="primary" type="submit">Sign in</button>
+    <p id="loginErr" class="error" role="alert"></p>
+  </form>
+</div>
+
+<div id="app" class="app" hidden>
+  <nav class="side" aria-label="Main">
+    <div class="brand">PhishGuard<span>AI</span></div>
+    <button data-view="overview" class="active">Overview</button>
+    <button data-view="history">Scan history</button>
+    <button data-view="reports">Threat reports</button>
+    <button data-view="model">Detection model</button>
+    <button data-view="settings">Settings</button>
+    <button data-view="vault" id="vaultNav" hidden>Admin vault</button>
+    <div class="who"><span id="whoami" class="muted"></span><button id="logout">Sign out</button></div>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>

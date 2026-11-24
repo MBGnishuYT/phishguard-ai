@@ -1,0 +1,7 @@
+.env
+.git
+tests
+extension
+**/__pycache__
+database/*.db*
+node_modules

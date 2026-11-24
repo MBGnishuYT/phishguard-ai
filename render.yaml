@@ -1,0 +1,18 @@
+# Render Blueprint: New -> Blueprint -> pick your GitHub repo. Secrets marked sync:false are typed in the Render dashboard.
+services:
+  - type: web
+    name: phishguard-api
+    runtime: docker
+    plan: starter            # persistent disks need a paid plan; on free plans SQLite data is lost on every redeploy
+    healthCheckPath: /health
+    disk: { name: phishguard-data, mountPath: /data, sizeGB: 1 }
+    envVars:
+      - { key: PHISHGUARD_ENV, value: production }
+      - { key: TRUST_PROXY_HEADERS, value: "true" }
+      - { key: DATABASE_PATH, value: /data/phishguard.db }
+      - { key: JWT_SECRET, generateValue: true }
+      - { key: ADMIN_USERNAME, value: admin }
+      - { key: ADMIN_PASSWORD, sync: false }
+      - { key: ADMIN_MASTER_KEY, sync: false }
+      - { key: GOOGLE_SAFE_BROWSING_API_KEY, sync: false }
+      - { key: URLHAUS_AUTH_KEY, sync: false }

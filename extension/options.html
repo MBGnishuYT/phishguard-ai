@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>PhishGuard AI - Settings</title>
+<link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="options.css"></head>
+<body><main>
+<h1>PhishGuard AI settings</h1>
+<section><h2>Protection</h2>
+  <label class="row"><input type="checkbox" id="enabled"> Protection on</label>
+  <label class="row"><input type="checkbox" id="notifications"> Show an alert when a page is suspicious or dangerous</label>
+  <label class="row"><input type="checkbox" id="deepScan"> Deep scan every page (checks domain age, certificate and redirects; slightly slower)</label>
+  <label class="row"><input type="checkbox" id="shareScans"> Send scan results to my PhishGuard dashboard</label>
+</section>
+<section><h2>Screen watch (page analysis)</h2>
+  <p class="muted">Looks at the structure of each page - login forms that send data to another site, misleading links, hidden frames - to catch phishing that a URL alone cannot reveal.
+  It never reads what you type, cookies, page text or screenshots. Needs permission to read pages, which Chrome will ask you to confirm.</p>
+  <label class="row"><input type="checkbox" id="pageAnalysis"> Analyse page structure for phishing signs</label>
+</section>
+<section><h2>Server</h2>
+  <label for="apiBase">PhishGuard server address</label>
+  <input type="url" id="apiBase" placeholder="https://your-app.onrender.com">
+  <div class="row"><button id="saveApi" class="primary">Save &amp; test connection</button> <span id="apiStatus" class="muted" role="status"></span></div>
+</section>
+<section><h2>Trusted sites</h2>
+  <div class="row"><input type="text" id="newTrust" placeholder="example.com"><button id="addTrust">Add</button></div>
+  <ul id="trustList" class="list"></ul>
+</section>
+<section><h2>Scan history <button id="clearHist">Clear</button></h2>
+  <ul id="hist" class="list"></ul>
+</section>
+<section><h2>Privacy</h2>
+  <p class="muted">Sent to your server: the page address without query values or fragment, the verdict inputs listed above, and an anonymous install token. Never sent: passwords, cookies, authentication tokens, page contents, or what you type. Private/intranet addresses are never scanned remotely.</p>
+</section>
+</main><script src="options.js" type="module"></script></body></html>

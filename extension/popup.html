@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>PhishGuard AI</title>
+<link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><strong>PhishGuard AI</strong>
+  <label class="switch" title="Turn protection on or off"><input type="checkbox" id="enabled" aria-label="Protection on"><span class="slider"></span></label></header>
+<main>
+  <section id="verdict" aria-live="polite">
+    <div id="gauge" class="gauge"><span id="score">–</span></div>
+    <div><div id="label" class="label">Checking…</div><div id="host" class="muted host"></div></div>
+  </section>
+  <ul id="reasons" class="reasons"></ul>
+  <div id="notice" class="muted notice" hidden></div>
+  <div class="actions">
+    <button id="rescan">Deep scan this page</button>
+    <button id="trust">Trust this site</button>
+  </div>
+  <h3>Recent scans</h3>
+  <ul id="recent" class="recent"></ul>
+</main>
+<footer><a href="#" id="options">Settings &amp; trusted sites</a> <a href="#" id="dash">Dashboard</a></footer>
+<script src="popup.js" type="module"></script></body></html>

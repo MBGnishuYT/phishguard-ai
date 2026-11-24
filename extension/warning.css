@@ -1,0 +1,7 @@
+body{display:grid;place-items:center;min-height:100vh;background:#1a0f10}
+main{max-width:640px;padding:36px;border:1px solid var(--danger);border-radius:10px;background:var(--bg);margin:20px}
+.icon{width:56px;height:56px;border-radius:50%;background:var(--danger);color:#fff;font-size:34px;font-weight:700;display:grid;place-items:center;margin-bottom:14px}
+h1{font-size:26px}.lead{font-size:16px}.score{color:var(--muted)}h2{font-size:15px;margin-top:20px}
+.actions{margin:24px 0}.actions button{padding:11px 20px;font-size:15px}
+details{margin-top:12px;color:var(--muted)}details summary{cursor:pointer}details label{display:block;margin:12px 0}
+details button{margin-right:8px}
